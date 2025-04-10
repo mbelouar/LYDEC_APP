@@ -438,3 +438,688 @@ Stack trace:
     [status] => approved
 )
 
+[06-Apr-2025 11:44:10 UTC] Looking for consumption with client_id=, month=Septembre 2025
+[06-Apr-2025 11:44:10 UTC] No consumption found for client  and month Septembre 2025
+[06-Apr-2025 11:44:10 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:44:10 UTC] Parameters: client_id=, month=Septembre 2025, current_reading=3000, photo=
+[06-Apr-2025 11:44:10 UTC] PDO Error in addConsumption: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: Consumption.client_id
+[06-Apr-2025 11:44:10 UTC] SQL State: 23000
+[06-Apr-2025 11:46:10 UTC] Looking for consumption with client_id=1, month=Janvier 2025
+[06-Apr-2025 11:46:10 UTC] No consumption found for client 1 and month Janvier 2025
+[06-Apr-2025 11:46:10 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:46:10 UTC] Parameters: client_id=1, month=Janvier 2025, current_reading=150, photo=../uploads/meter_photos/1743939970_Untitled.png
+[06-Apr-2025 11:46:10 UTC] Last inserted ID: 13
+[06-Apr-2025 11:46:10 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:46:33 UTC] Looking for consumption with client_id=1, month=Février 2025
+[06-Apr-2025 11:46:33 UTC] No consumption found for client 1 and month Février 2025
+[06-Apr-2025 11:47:03 UTC] Looking for consumption with client_id=1, month=Février 2025
+[06-Apr-2025 11:47:03 UTC] No consumption found for client 1 and month Février 2025
+[06-Apr-2025 11:47:03 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:47:03 UTC] Parameters: client_id=1, month=Février 2025, current_reading=150, photo=../uploads/meter_photos/1743940023_Untitled.png
+[06-Apr-2025 11:47:03 UTC] Last inserted ID: 14
+[06-Apr-2025 11:47:03 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:47:40 UTC] Getting consumption details for ID: 14
+[06-Apr-2025 11:47:40 UTC] Found consumption: Array
+(
+    [idC] => 14
+    [client_id] => 1
+    [month] => Février 2025
+    [current_reading] => 150
+    [photo] => ../uploads/meter_photos/1743940023_Untitled.png
+    [dateReleve] => 2025-04-06 11:47:03
+    [status] => pending
+    [client_nom] => krichi
+    [client_prenom] => sara
+)
+
+[06-Apr-2025 11:47:55 UTC] Getting previous consumption for client 1 before consumption 14
+[06-Apr-2025 11:47:55 UTC] Found previous consumption: Array
+(
+    [idC] => 13
+    [client_id] => 1
+    [month] => Janvier 2025
+    [current_reading] => 150
+    [photo] => ../uploads/meter_photos/1743939970_Untitled.png
+    [dateReleve] => 2025-04-06 11:46:10
+    [status] => pending
+)
+
+[06-Apr-2025 11:47:58 UTC] Getting previous consumption for client 1 before consumption 13
+[06-Apr-2025 11:47:58 UTC] No previous consumption found for client 1 before consumption 13
+[06-Apr-2025 11:48:41 UTC] Looking for consumption with client_id=1, month=Février 2025
+[06-Apr-2025 11:48:41 UTC] Found consumption with exact match
+[06-Apr-2025 11:49:15 UTC] Looking for consumption with client_id=1, month=Mars 2025
+[06-Apr-2025 11:49:15 UTC] No consumption found for client 1 and month Mars 2025
+[06-Apr-2025 11:49:15 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:49:15 UTC] Parameters: client_id=1, month=Mars 2025, current_reading=300, photo=
+[06-Apr-2025 11:49:15 UTC] Last inserted ID: 15
+[06-Apr-2025 11:49:15 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:49:24 UTC] Looking for consumption with client_id=1, month=Avril 2025
+[06-Apr-2025 11:49:24 UTC] No consumption found for client 1 and month Avril 2025
+[06-Apr-2025 11:49:24 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:49:24 UTC] Parameters: client_id=1, month=Avril 2025, current_reading=450, photo=
+[06-Apr-2025 11:49:24 UTC] Last inserted ID: 16
+[06-Apr-2025 11:49:24 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:49:48 UTC] Looking for consumption with client_id=1, month=Mai 2025
+[06-Apr-2025 11:49:48 UTC] No consumption found for client 1 and month Mai 2025
+[06-Apr-2025 11:49:48 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:49:48 UTC] Parameters: client_id=1, month=Mai 2025, current_reading=600, photo=
+[06-Apr-2025 11:49:48 UTC] Last inserted ID: 17
+[06-Apr-2025 11:49:48 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:49:55 UTC] Looking for consumption with client_id=1, month=Juin 2025
+[06-Apr-2025 11:49:55 UTC] No consumption found for client 1 and month Juin 2025
+[06-Apr-2025 11:49:55 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:49:55 UTC] Parameters: client_id=1, month=Juin 2025, current_reading=750, photo=
+[06-Apr-2025 11:49:55 UTC] Last inserted ID: 18
+[06-Apr-2025 11:49:55 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:50:12 UTC] Looking for consumption with client_id=1, month=Juillet 2025
+[06-Apr-2025 11:50:12 UTC] No consumption found for client 1 and month Juillet 2025
+[06-Apr-2025 11:50:12 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:50:12 UTC] Parameters: client_id=1, month=Juillet 2025, current_reading=900, photo=
+[06-Apr-2025 11:50:12 UTC] Last inserted ID: 19
+[06-Apr-2025 11:50:12 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:50:31 UTC] Looking for consumption with client_id=1, month=Août 2025
+[06-Apr-2025 11:50:31 UTC] No consumption found for client 1 and month Août 2025
+[06-Apr-2025 11:50:31 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:50:31 UTC] Parameters: client_id=1, month=Août 2025, current_reading=1050, photo=
+[06-Apr-2025 11:50:31 UTC] Last inserted ID: 20
+[06-Apr-2025 11:50:31 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:50:40 UTC] Looking for consumption with client_id=1, month=Septembre 2025
+[06-Apr-2025 11:50:40 UTC] No consumption found for client 1 and month Septembre 2025
+[06-Apr-2025 11:50:40 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:50:40 UTC] Parameters: client_id=1, month=Septembre 2025, current_reading=1200, photo=
+[06-Apr-2025 11:50:40 UTC] Last inserted ID: 21
+[06-Apr-2025 11:50:40 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:50:48 UTC] Looking for consumption with client_id=1, month=Octobre 2025
+[06-Apr-2025 11:50:48 UTC] No consumption found for client 1 and month Octobre 2025
+[06-Apr-2025 11:50:48 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:50:48 UTC] Parameters: client_id=1, month=Octobre 2025, current_reading=1350, photo=
+[06-Apr-2025 11:50:48 UTC] Last inserted ID: 22
+[06-Apr-2025 11:50:48 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:50:55 UTC] Looking for consumption with client_id=1, month=Novembre 2025
+[06-Apr-2025 11:50:55 UTC] No consumption found for client 1 and month Novembre 2025
+[06-Apr-2025 11:50:55 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:50:55 UTC] Parameters: client_id=1, month=Novembre 2025, current_reading=1500, photo=
+[06-Apr-2025 11:50:55 UTC] Last inserted ID: 23
+[06-Apr-2025 11:50:55 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 11:51:14 UTC] Looking for consumption with client_id=1, month=Décembre 2025
+[06-Apr-2025 11:51:14 UTC] No consumption found for client 1 and month Décembre 2025
+[06-Apr-2025 11:51:14 UTC] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[06-Apr-2025 11:51:14 UTC] Parameters: client_id=1, month=Décembre 2025, current_reading=1687, photo=
+[06-Apr-2025 11:51:14 UTC] Last inserted ID: 24
+[06-Apr-2025 11:51:14 UTC] Successfully retrieved last consumption directly after insert
+[06-Apr-2025 12:14:38 UTC] Getting previous consumption for client 1 before consumption 15
+[06-Apr-2025 12:14:38 UTC] Found previous consumption: Array
+(
+    [idC] => 13
+    [client_id] => 1
+    [month] => Janvier 2025
+    [current_reading] => 150
+    [photo] => ../uploads/meter_photos/1743939970_Untitled.png
+    [dateReleve] => 2025-04-06 11:46:10
+    [status] => approved
+)
+
+[06-Apr-2025 12:14:43 UTC] Getting previous consumption for client 1 before consumption 17
+[06-Apr-2025 12:14:43 UTC] Found previous consumption: Array
+(
+    [idC] => 16
+    [client_id] => 1
+    [month] => Avril 2025
+    [current_reading] => 450
+    [photo] => 
+    [dateReleve] => 2025-04-06 11:49:24
+    [status] => pending
+)
+
+[06-Apr-2025 12:14:48 UTC] Getting previous consumption for client 1 before consumption 16
+[06-Apr-2025 12:14:48 UTC] Found previous consumption: Array
+(
+    [idC] => 15
+    [client_id] => 1
+    [month] => Mars 2025
+    [current_reading] => 300
+    [photo] => 
+    [dateReleve] => 2025-04-06 11:49:15
+    [status] => approved
+)
+
+[06-Apr-2025 12:14:51 UTC] Getting previous consumption for client 1 before consumption 18
+[06-Apr-2025 12:14:51 UTC] Found previous consumption: Array
+(
+    [idC] => 17
+    [client_id] => 1
+    [month] => Mai 2025
+    [current_reading] => 600
+    [photo] => 
+    [dateReleve] => 2025-04-06 11:49:48
+    [status] => approved
+)
+
+[06-Apr-2025 12:14:55 UTC] Getting previous consumption for client 1 before consumption 20
+[06-Apr-2025 12:14:55 UTC] Found previous consumption: Array
+(
+    [idC] => 19
+    [client_id] => 1
+    [month] => Juillet 2025
+    [current_reading] => 900
+    [photo] => 
+    [dateReleve] => 2025-04-06 11:50:12
+    [status] => pending
+)
+
+[06-Apr-2025 12:14:58 UTC] Getting previous consumption for client 1 before consumption 19
+[06-Apr-2025 12:14:58 UTC] Found previous consumption: Array
+(
+    [idC] => 18
+    [client_id] => 1
+    [month] => Juin 2025
+    [current_reading] => 750
+    [photo] => 
+    [dateReleve] => 2025-04-06 11:49:55
+    [status] => approved
+)
+
+[06-Apr-2025 12:15:01 UTC] Getting previous consumption for client 1 before consumption 21
+[06-Apr-2025 12:15:01 UTC] Found previous consumption: Array
+(
+    [idC] => 20
+    [client_id] => 1
+    [month] => Août 2025
+    [current_reading] => 1050
+    [photo] => 
+    [dateReleve] => 2025-04-06 11:50:31
+    [status] => approved
+)
+
+[06-Apr-2025 12:15:05 UTC] Getting previous consumption for client 1 before consumption 22
+[06-Apr-2025 12:15:05 UTC] Found previous consumption: Array
+(
+    [idC] => 21
+    [client_id] => 1
+    [month] => Septembre 2025
+    [current_reading] => 1200
+    [photo] => 
+    [dateReleve] => 2025-04-06 11:50:40
+    [status] => approved
+)
+
+[06-Apr-2025 12:15:09 UTC] Getting previous consumption for client 1 before consumption 24
+[06-Apr-2025 12:15:09 UTC] Found previous consumption: Array
+(
+    [idC] => 23
+    [client_id] => 1
+    [month] => Novembre 2025
+    [current_reading] => 1500
+    [photo] => 
+    [dateReleve] => 2025-04-06 11:50:55
+    [status] => pending
+)
+
+[06-Apr-2025 12:15:11 UTC] Getting previous consumption for client 1 before consumption 23
+[06-Apr-2025 12:15:11 UTC] Found previous consumption: Array
+(
+    [idC] => 22
+    [client_id] => 1
+    [month] => Octobre 2025
+    [current_reading] => 1350
+    [photo] => 
+    [dateReleve] => 2025-04-06 11:50:48
+    [status] => approved
+)
+
+[07-Apr-2025 03:00:00 Europe/Berlin] Looking for consumption with client_id=9, month=Janvier 2025
+[07-Apr-2025 03:00:00 Europe/Berlin] No consumption found for client 9 and month Janvier 2025
+[07-Apr-2025 03:00:00 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[07-Apr-2025 03:00:00 Europe/Berlin] Parameters: client_id=9, month=Janvier 2025, current_reading=2555, photo=../uploads/meter_photos/1743987600_aliceuta.jpg
+[07-Apr-2025 03:00:00 Europe/Berlin] Last inserted ID: 25
+[07-Apr-2025 03:00:00 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[07-Apr-2025 03:04:03 Europe/Berlin] Getting consumption details for ID: 25
+[07-Apr-2025 03:04:03 Europe/Berlin] Found consumption: Array
+(
+    [idC] => 25
+    [client_id] => 9
+    [month] => Janvier 2025
+    [current_reading] => 2555
+    [photo] => ../uploads/meter_photos/1743987600_aliceuta.jpg
+    [dateReleve] => 2025-04-07 01:00:00
+    [status] => pending
+    [client_nom] => ali
+    [client_prenom] => ali
+)
+
+[07-Apr-2025 03:04:12 Europe/Berlin] Getting previous consumption for client 9 before consumption 25
+[07-Apr-2025 03:04:12 Europe/Berlin] No previous consumption found for client 9 before consumption 25
+[07-Apr-2025 03:04:47 Europe/Berlin] Looking for consumption with client_id=, month=Mars 2025
+[07-Apr-2025 03:04:47 Europe/Berlin] No consumption found for client  and month Mars 2025
+[07-Apr-2025 03:04:47 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[07-Apr-2025 03:04:47 Europe/Berlin] Parameters: client_id=, month=Mars 2025, current_reading=2666, photo=
+[07-Apr-2025 03:04:47 Europe/Berlin] PDO Error in addConsumption: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: Consumption.client_id
+[07-Apr-2025 03:04:47 Europe/Berlin] SQL State: 23000
+[07-Apr-2025 03:12:26 Europe/Berlin] Looking for consumption with client_id=9, month=Février 2025
+[07-Apr-2025 03:12:26 Europe/Berlin] No consumption found for client 9 and month Février 2025
+[07-Apr-2025 03:12:26 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[07-Apr-2025 03:12:26 Europe/Berlin] Parameters: client_id=9, month=Février 2025, current_reading=3555, photo=../uploads/meter_photos/1743988346_WhatsApp Image 2025-03-19 at 00.10.08.jpeg
+[07-Apr-2025 03:12:26 Europe/Berlin] Last inserted ID: 26
+[07-Apr-2025 03:12:26 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[07-Apr-2025 03:13:48 Europe/Berlin] Getting previous consumption for client 9 before consumption 26
+[07-Apr-2025 03:13:48 Europe/Berlin] Found previous consumption: Array
+(
+    [idC] => 25
+    [client_id] => 9
+    [month] => Janvier 2025
+    [current_reading] => 2555
+    [photo] => ../uploads/meter_photos/1743987600_aliceuta.jpg
+    [dateReleve] => 2025-04-07 01:00:00
+    [status] => approved
+)
+
+[07-Apr-2025 03:41:03 Europe/Berlin] Looking for consumption with client_id=10, month=Janvier 2025
+[07-Apr-2025 03:41:03 Europe/Berlin] No consumption found for client 10 and month Janvier 2025
+[07-Apr-2025 03:41:03 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[07-Apr-2025 03:41:03 Europe/Berlin] Parameters: client_id=10, month=Janvier 2025, current_reading=12255, photo=../uploads/meter_photos/1743990063_mongo.jfif
+[07-Apr-2025 03:41:03 Europe/Berlin] Last inserted ID: 27
+[07-Apr-2025 03:41:03 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[07-Apr-2025 03:45:30 Europe/Berlin] Getting previous consumption for client 10 before consumption 27
+[07-Apr-2025 03:45:30 Europe/Berlin] No previous consumption found for client 10 before consumption 27
+[09-Apr-2025 03:58:14 Europe/Berlin] Looking for consumption with client_id=9, month=Janvier 2025
+[09-Apr-2025 03:58:14 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 03:58:21 Europe/Berlin] Looking for consumption with client_id=9, month=Février 2025
+[09-Apr-2025 03:58:21 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 03:58:25 Europe/Berlin] Looking for consumption with client_id=9, month=Mars 2025
+[09-Apr-2025 03:58:25 Europe/Berlin] No consumption found for client 9 and month Mars 2025
+[09-Apr-2025 03:58:25 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 03:58:25 Europe/Berlin] Parameters: client_id=9, month=Mars 2025, current_reading=4555, photo=../uploads/meter_photos/1744163905_ensatt.png
+[09-Apr-2025 03:58:25 Europe/Berlin] Last inserted ID: 28
+[09-Apr-2025 03:58:25 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 04:35:31 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 04:35:31 Europe/Berlin] Parameters: client_id=9, month=Avril 2025, current_reading=4705, photo=
+[09-Apr-2025 04:35:31 Europe/Berlin] Last inserted ID: 29
+[09-Apr-2025 04:35:31 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 04:35:31 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 04:35:43 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 04:35:43 Europe/Berlin] Parameters: client_id=9, month=Avril 2025, current_reading=4705, photo=
+[09-Apr-2025 04:35:43 Europe/Berlin] Last inserted ID: 30
+[09-Apr-2025 04:35:43 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 04:35:43 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 04:35:43 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 04:35:43 Europe/Berlin] Parameters: client_id=9, month=Avril 2025, current_reading=4705, photo=
+[09-Apr-2025 04:35:43 Europe/Berlin] Last inserted ID: 31
+[09-Apr-2025 04:35:43 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 04:35:43 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 04:35:44 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 04:35:44 Europe/Berlin] Parameters: client_id=9, month=Avril 2025, current_reading=4705, photo=
+[09-Apr-2025 04:35:44 Europe/Berlin] Last inserted ID: 32
+[09-Apr-2025 04:35:44 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 04:35:44 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 04:35:45 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 04:35:45 Europe/Berlin] Parameters: client_id=9, month=Avril 2025, current_reading=4705, photo=
+[09-Apr-2025 04:35:45 Europe/Berlin] Last inserted ID: 33
+[09-Apr-2025 04:35:45 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 04:35:45 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 04:35:45 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 04:35:45 Europe/Berlin] Parameters: client_id=9, month=Avril 2025, current_reading=4705, photo=
+[09-Apr-2025 04:35:45 Europe/Berlin] Last inserted ID: 34
+[09-Apr-2025 04:35:45 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 04:35:45 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 04:35:45 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 04:35:45 Europe/Berlin] Parameters: client_id=9, month=Avril 2025, current_reading=4705, photo=
+[09-Apr-2025 04:35:45 Europe/Berlin] Last inserted ID: 35
+[09-Apr-2025 04:35:45 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 04:35:46 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 04:35:46 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 04:35:46 Europe/Berlin] Parameters: client_id=9, month=Avril 2025, current_reading=4705, photo=
+[09-Apr-2025 04:35:46 Europe/Berlin] Last inserted ID: 36
+[09-Apr-2025 04:35:46 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 04:35:46 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 04:38:43 Europe/Berlin] Looking for consumption with client_id=9, month=Mai 2025
+[09-Apr-2025 04:38:43 Europe/Berlin] No consumption found for client 9 and month Mai 2025
+[09-Apr-2025 04:38:43 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 04:38:43 Europe/Berlin] Parameters: client_id=9, month=Mai 2025, current_reading=4855, photo=../uploads/meter_photos/1744166323_ensatt.png
+[09-Apr-2025 04:38:44 Europe/Berlin] Last inserted ID: 37
+[09-Apr-2025 04:38:44 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:11 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:11 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:11 Europe/Berlin] Last inserted ID: 38
+[09-Apr-2025 06:00:11 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:11 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:12 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:12 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:12 Europe/Berlin] Last inserted ID: 39
+[09-Apr-2025 06:00:12 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:12 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:12 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:12 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:12 Europe/Berlin] Last inserted ID: 40
+[09-Apr-2025 06:00:12 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:12 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:13 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:13 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:13 Europe/Berlin] Last inserted ID: 41
+[09-Apr-2025 06:00:13 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:13 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:13 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:13 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:13 Europe/Berlin] Last inserted ID: 42
+[09-Apr-2025 06:00:13 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:13 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:13 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:13 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:13 Europe/Berlin] Last inserted ID: 43
+[09-Apr-2025 06:00:13 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:13 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:13 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:13 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:13 Europe/Berlin] Last inserted ID: 44
+[09-Apr-2025 06:00:13 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:13 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:13 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:13 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:13 Europe/Berlin] Last inserted ID: 45
+[09-Apr-2025 06:00:13 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:13 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:13 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:13 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:13 Europe/Berlin] Last inserted ID: 46
+[09-Apr-2025 06:00:13 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:13 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:14 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:14 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:14 Europe/Berlin] Last inserted ID: 47
+[09-Apr-2025 06:00:14 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:14 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:14 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:14 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:14 Europe/Berlin] Last inserted ID: 48
+[09-Apr-2025 06:00:14 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:14 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:14 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:14 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:14 Europe/Berlin] Last inserted ID: 49
+[09-Apr-2025 06:00:14 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:14 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:14 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:14 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:14 Europe/Berlin] Last inserted ID: 50
+[09-Apr-2025 06:00:14 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:14 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:14 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:14 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:14 Europe/Berlin] Last inserted ID: 51
+[09-Apr-2025 06:00:14 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:14 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:15 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:15 Europe/Berlin] Parameters: client_id=9, month=Juin 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:15 Europe/Berlin] Last inserted ID: 52
+[09-Apr-2025 06:00:15 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:15 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:26 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:26 Europe/Berlin] Parameters: client_id=9, month=Octobre 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:26 Europe/Berlin] Last inserted ID: 53
+[09-Apr-2025 06:00:26 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:26 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:27 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:27 Europe/Berlin] Parameters: client_id=9, month=Octobre 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:27 Europe/Berlin] Last inserted ID: 54
+[09-Apr-2025 06:00:27 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:27 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:27 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:27 Europe/Berlin] Parameters: client_id=9, month=Octobre 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:27 Europe/Berlin] Last inserted ID: 55
+[09-Apr-2025 06:00:27 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:27 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:00:27 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:00:27 Europe/Berlin] Parameters: client_id=9, month=Octobre 2025, current_reading=5005, photo=
+[09-Apr-2025 06:00:27 Europe/Berlin] Last inserted ID: 56
+[09-Apr-2025 06:00:27 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:00:27 Europe/Berlin] Cannot create invoice: consumption not approved. Status: pending
+[09-Apr-2025 06:01:05 Europe/Berlin] Looking for consumption with client_id=9, month=Février 2025
+[09-Apr-2025 06:01:05 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 06:01:15 Europe/Berlin] Looking for consumption with client_id=9, month=Août 2025
+[09-Apr-2025 06:01:15 Europe/Berlin] No consumption found for client 9 and month Août 2025
+[09-Apr-2025 06:01:15 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:01:15 Europe/Berlin] Parameters: client_id=9, month=Août 2025, current_reading=5006, photo=../uploads/meter_photos/1744171275_ensatt.png
+[09-Apr-2025 06:01:15 Europe/Berlin] Last inserted ID: 57
+[09-Apr-2025 06:01:15 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:12:20 Europe/Berlin] Looking for consumption with client_id=9, month=Septembre 2025
+[09-Apr-2025 06:12:20 Europe/Berlin] No consumption found for client 9 and month Septembre 2025
+[09-Apr-2025 06:12:20 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:12:20 Europe/Berlin] Parameters: client_id=9, month=Septembre 2025, current_reading=5168, photo=../uploads/meter_photos/1744171940_ensatt.png
+[09-Apr-2025 06:12:20 Europe/Berlin] Last inserted ID: 58
+[09-Apr-2025 06:12:20 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:23:41 Europe/Berlin] Looking for consumption with client_id=9, month=Octobre 2025
+[09-Apr-2025 06:23:41 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 06:23:50 Europe/Berlin] Looking for consumption with client_id=9, month=Novembre 2025
+[09-Apr-2025 06:23:50 Europe/Berlin] No consumption found for client 9 and month Novembre 2025
+[09-Apr-2025 06:23:50 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:23:50 Europe/Berlin] Parameters: client_id=9, month=Novembre 2025, current_reading=5318, photo=../uploads/meter_photos/1744172630_ensatt.png
+[09-Apr-2025 06:23:50 Europe/Berlin] Last inserted ID: 59
+[09-Apr-2025 06:23:50 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:50:44 Europe/Berlin] Looking for consumption with client_id=9, month=Novembre 2025
+[09-Apr-2025 06:50:44 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 06:50:49 Europe/Berlin] Looking for consumption with client_id=9, month=Décembre 2025
+[09-Apr-2025 06:50:49 Europe/Berlin] No consumption found for client 9 and month Décembre 2025
+[09-Apr-2025 06:50:49 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:50:49 Europe/Berlin] Parameters: client_id=9, month=Décembre 2025, current_reading=54444, photo=../uploads/meter_photos/1744174249_ensatt.png
+[09-Apr-2025 06:50:49 Europe/Berlin] Last inserted ID: 60
+[09-Apr-2025 06:50:49 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 06:51:51 Europe/Berlin] Looking for consumption with client_id=9, month=Novembre 2025
+[09-Apr-2025 06:51:51 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 06:53:04 Europe/Berlin] Looking for consumption with client_id=9, month=Mai 2025
+[09-Apr-2025 06:53:04 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 06:53:08 Europe/Berlin] Looking for consumption with client_id=9, month=Avril 2025
+[09-Apr-2025 06:53:08 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 06:53:12 Europe/Berlin] Looking for consumption with client_id=9, month=Juin 2025
+[09-Apr-2025 06:53:12 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 06:53:16 Europe/Berlin] Looking for consumption with client_id=9, month=Juillet 2025
+[09-Apr-2025 06:53:16 Europe/Berlin] No consumption found for client 9 and month Juillet 2025
+[09-Apr-2025 06:53:16 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[09-Apr-2025 06:53:16 Europe/Berlin] Parameters: client_id=9, month=Juillet 2025, current_reading=54445, photo=
+[09-Apr-2025 06:53:16 Europe/Berlin] Last inserted ID: 61
+[09-Apr-2025 06:53:16 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[09-Apr-2025 23:41:58 Europe/Berlin] Getting previous consumption for client 9 before consumption 57
+[09-Apr-2025 23:41:58 Europe/Berlin] Found previous consumption: Array
+(
+    [idC] => 56
+    [client_id] => 9
+    [month] => Octobre 2025
+    [current_reading] => 5005
+    [photo] => 
+    [dateReleve] => 2025-04-09 04:00:27
+    [status] => pending
+)
+
+[09-Apr-2025 23:45:56 Europe/Berlin] Looking for consumption with client_id=9, month=Mai 2025
+[09-Apr-2025 23:45:56 Europe/Berlin] Found consumption with exact match
+[09-Apr-2025 23:46:04 Europe/Berlin] Looking for consumption with client_id=9, month=Août 2025
+[09-Apr-2025 23:46:04 Europe/Berlin] Found consumption with exact match
+[10-Apr-2025 00:19:18 Europe/Berlin] Looking for consumption with client_id=11, month=Janvier 2025
+[10-Apr-2025 00:19:18 Europe/Berlin] No consumption found for client 11 and month Janvier 2025
+[10-Apr-2025 00:19:18 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[10-Apr-2025 00:19:18 Europe/Berlin] Parameters: client_id=11, month=Janvier 2025, current_reading=150, photo=
+[10-Apr-2025 00:19:18 Europe/Berlin] Last inserted ID: 62
+[10-Apr-2025 00:19:18 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[10-Apr-2025 01:31:40 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[10-Apr-2025 01:31:40 Europe/Berlin] Parameters: client_id=11, month=Janvier 2025, current_reading=300, photo=
+[10-Apr-2025 01:31:40 Europe/Berlin] Last inserted ID: 63
+[10-Apr-2025 01:31:40 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[10-Apr-2025 01:32:03 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[10-Apr-2025 01:32:03 Europe/Berlin] Parameters: client_id=11, month=Février 2025, current_reading=450, photo=
+[10-Apr-2025 01:32:03 Europe/Berlin] Last inserted ID: 64
+[10-Apr-2025 01:32:03 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[10-Apr-2025 04:00:58 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[10-Apr-2025 04:00:58 Europe/Berlin] Parameters: client_id=11, month=Mars 2025, current_reading=650, photo=
+[10-Apr-2025 04:00:58 Europe/Berlin] Last inserted ID: 65
+[10-Apr-2025 04:00:58 Europe/Berlin] Successfully retrieved last consumption directly after insert
+[10-Apr-2025 04:02:41 Europe/Berlin] Prepared SQL: INSERT INTO Consumption 
+                    (client_id, month, current_reading, photo) 
+                    VALUES 
+                    (?, ?, ?, ?)
+[10-Apr-2025 04:02:41 Europe/Berlin] Parameters: client_id=11, month=Avril 2025, current_reading=60000000, photo=
+[10-Apr-2025 04:02:41 Europe/Berlin] Last inserted ID: 66
+[10-Apr-2025 04:02:41 Europe/Berlin] Successfully retrieved last consumption directly after insert

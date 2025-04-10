@@ -15,13 +15,11 @@ class Client {
         $stmt->execute([$data['email']]);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($row['nb'] > 0) {
-            // L'email existe déjà, on retourne false pour signaler l'erreur
             return false;
         }
-
-        // Insertion du client si l'email n'existe pas
-        $sql = "INSERT INTO Client (cin, nom, prenom, email, telephone, adresse, password)
-                VALUES (?, ?, ?, ?, ?, ?, ?)";
+    
+        $sql = "INSERT INTO Client (cin, nom, prenom, email, telephone, adresse, numero_de_compteur, password)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute([
             $data['cin'],
@@ -30,6 +28,7 @@ class Client {
             $data['email'],
             $data['telephone'],
             $data['adresse'],
+            $data['numero_de_compteur'],
             password_hash($data['password'], PASSWORD_BCRYPT)
         ]);
     }
@@ -63,7 +62,7 @@ class Client {
 
     // Mise à jour du profil d'un client (pour le client lui-même)
     public function updateProfile($id, $data) {
-        $sql = "UPDATE Client SET nom = ?, prenom = ?, email = ?, telephone = ?, adresse = ?
+        $sql = "UPDATE Client SET nom = ?, prenom = ?, email = ?, telephone = ?, adresse = ?, numero_de_compteur = ?
                 WHERE id = ?";
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute([
@@ -72,6 +71,7 @@ class Client {
             $data['email'],
             $data['telephone'],
             $data['adresse'],
+            $data['numero_de_compteur'],
             $id
         ]);
     }
@@ -79,8 +79,7 @@ class Client {
     // Mise à jour d'un client (gestion par le fournisseur)
     public function updateClient($id, $data) {
         if (isset($data['password']) && !empty($data['password'])) {
-            // Mise à jour avec le nouveau mot de passe
-            $sql = "UPDATE Client SET cin = ?, nom = ?, prenom = ?, email = ?, telephone = ?, adresse = ?, password = ?
+            $sql = "UPDATE Client SET cin = ?, nom = ?, prenom = ?, email = ?, telephone = ?, adresse = ?, numero_de_compteur = ?, password = ?
                     WHERE id = ?";
             $stmt = $this->pdo->prepare($sql);
             return $stmt->execute([
@@ -90,12 +89,12 @@ class Client {
                 $data['email'],
                 $data['telephone'],
                 $data['adresse'],
+                $data['numero_de_compteur'],
                 password_hash($data['password'], PASSWORD_BCRYPT),
                 $id
             ]);
         } else {
-            // Mise à jour sans changer le mot de passe
-            $sql = "UPDATE Client SET cin = ?, nom = ?, prenom = ?, email = ?, telephone = ?, adresse = ?
+            $sql = "UPDATE Client SET cin = ?, nom = ?, prenom = ?, email = ?, telephone = ?, adresse = ?, numero_de_compteur = ?
                     WHERE id = ?";
             $stmt = $this->pdo->prepare($sql);
             return $stmt->execute([
@@ -105,6 +104,7 @@ class Client {
                 $data['email'],
                 $data['telephone'],
                 $data['adresse'],
+                $data['numero_de_compteur'],
                 $id
             ]);
         }

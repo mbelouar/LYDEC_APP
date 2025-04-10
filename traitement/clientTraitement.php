@@ -12,13 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Fonctionnalités client existantes
     if ($action === 'register') {
         $data = [
-            'cin'       => $_POST['cin'],
-            'nom'       => $_POST['nom'],
-            'prenom'    => $_POST['prenom'],
-            'email'     => $_POST['email'],
-            'telephone' => $_POST['telephone'],
-            'adresse'   => $_POST['adresse'],
-            'password'  => $_POST['password']
+            'cin'               => $_POST['cin'],
+            'nom'               => $_POST['nom'],
+            'prenom'            => $_POST['prenom'],
+            'email'             => $_POST['email'],
+            'telephone'         => $_POST['telephone'],
+            'adresse'           => $_POST['adresse'],
+            'numero_de_compteur' => $_POST['numero_de_compteur'], 
+            'password'          => $_POST['password']
         ];
         if ($clientModel->register($data)) {
             header("Location: ../IHM/client/connexion.php");
@@ -50,7 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'prenom'    => $_POST['prenom'],
             'email'     => $_POST['email'],
             'telephone' => $_POST['telephone'],
-            'adresse'   => $_POST['adresse']
+            'adresse'   => $_POST['adresse'],
+            'numero_de_compteur' => $_POST['numero_de_compteur']
         ];
         if ($clientModel->updateProfile($clientId, $data)) {
             $_SESSION['client'] = $clientModel->getProfile($clientId);
@@ -68,13 +70,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
         $data = [
-            'cin'       => $_POST['cin'],
-            'nom'       => $_POST['nom'],
-            'prenom'    => $_POST['prenom'],
-            'email'     => $_POST['email'],
-            'telephone' => $_POST['telephone'],
-            'adresse'   => $_POST['adresse'],
-            'password'  => $_POST['password']
+            'cin'               => $_POST['cin'],
+            'nom'               => $_POST['nom'],
+            'prenom'            => $_POST['prenom'],
+            'email'             => $_POST['email'],
+            'telephone'         => $_POST['telephone'],
+            'adresse'           => $_POST['adresse'],
+            'numero_de_compteur' => $_POST['numero_de_compteur'], 
+            'password'          => $_POST['password']
         ];
         if ($clientModel->register($data)) {
             header("Location: ../IHM/fournisseur/clients.php");
@@ -97,7 +100,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'prenom'    => $_POST['prenom'],
             'email'     => $_POST['email'],
             'telephone' => $_POST['telephone'],
-            'adresse'   => $_POST['adresse']
+            'adresse'   => $_POST['adresse'],
+            'numero_de_compteur' => $_POST['numero_de_compteur']
         ];
         // Mise à jour du mot de passe si renseigné
         if (!empty($_POST['password'])) {

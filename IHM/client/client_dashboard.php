@@ -155,11 +155,6 @@ ob_start();
                             <div>Montant:</div>
                             <div class="fw-bold"><?php echo number_format($lastInvoice['montant'], 2); ?> DH</div>
                         </div>
-                        <?php if ($lastInvoice['statut'] === 'impayée'): ?>
-                            <div class="text-center mt-4">
-                                <a href="#" class="btn btn-accent">Payer Maintenant</a>
-                            </div>
-                        <?php endif; ?>
                     <?php else: ?>
                         <div class="text-center py-4">
                             <i class="fas fa-file-invoice text-muted mb-3" style="font-size: 3rem;"></i>
@@ -213,6 +208,7 @@ ob_start();
 <?php
 $pageContent = ob_get_clean();
 
-// Include the template
+// Include the template 
 require_once '../templates/client_template.php';
+
 ?>

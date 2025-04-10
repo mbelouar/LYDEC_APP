@@ -6,6 +6,17 @@ class Agent {
         $this->pdo = $pdo;
     }
 
+    public function login($emailAgent, $passwordAgent) {
+        $stmt = $this->pdo->prepare("SELECT * FROM Agent WHERE emailAgent = ?");
+        $stmt->execute([$emailAgent]);
+        $agent = $stmt->fetch();
+
+        if ($agent && password_verify($passwordAgent, $agent['passwordAgent'])) {
+            return $agent;
+        }
+        return false;
+    }
+
     public function addAgent($nomAgent, $prenomAgent, $emailAgent, $passwordAgent, $roleAgent, $fournisseurId) {
         $sql = "INSERT INTO Agent (nomAgent, prenomAgent, emailAgent, passwordAgent, roleAgent, fournisseur_id)
                 VALUES (?, ?, ?, ?, ?, ?)";

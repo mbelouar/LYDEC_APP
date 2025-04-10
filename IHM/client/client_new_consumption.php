@@ -326,8 +326,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add consumption to form data
         formData.append('consumption', consumption);
         
-        // For better compatibility, ensure field names match what the backend expects
-        formData.append('currentReading', currentReading);
+        // Add the action to generate the invoice automatically
+        formData.append('action', 'add_and_generate_invoice');
         
         // Add API_REQUEST flag to prevent text output in JSON response
         formData.append('API_REQUEST', 'true');
@@ -347,16 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            return response.text().then(text => {
-                try {
-                    // Try to parse as JSON
-                    return JSON.parse(text);
-                } catch (e) {
-                    // If parse fails, show the raw response for debugging
-                    console.error("Failed to parse JSON:", text);
-                    throw new Error(`Invalid JSON response: ${text.substring(0, 100)}...`);
-                }
-            });
+            return response.json();
         })
         .then(data => {
             // Reset button state

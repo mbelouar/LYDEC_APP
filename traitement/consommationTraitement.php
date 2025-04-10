@@ -436,6 +436,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && ($_POST[
             }
         }
     }
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'add_and_generate_invoice') {
+    $month = $_POST['month'] ?? '';
+    $currentReading = $_POST['currentReading'] ?? $_POST['current_reading'] ?? '';
+
+    if (empty($month) || empty($currentReading) || !is_numeric($currentReading) || $currentReading < 0) {
+        $response["errors"][] = "Données invalides.";
+    } else {
+        try {
+            // Récupérer la dernière consommation du client
+            $previousConsumption = $consumptionModel->getLastConsumptionByClient($clientId);
+            $previousReading = $previousConsumption ? $previousConsumption['current_reading'] : 0;
+            $kwhConsumed = $currentReading - $previousReading;
+
+            if ($kwhConsumed < 0) {
+                $response["errors"][] = "La consommation ne peut pas être négative.";
+            } else {
+                // Ajouter la consommation (statut déjà défini comme 'approved' par défaut)
+                $result = $consumptionModel->addConsumption($clientId, $month, $currentReading, null);
+                if ($result) {
+                    $newConsumption = $consumptionModel->getLastConsumptionByClient($clientId);
+
+                    // Générer la facture
+                    $factureModel = new Facture($pdo);
+                    $invoiceResult = $factureModel->createInvoiceFromConsumption($clientId, $newConsumption, $previousConsumption);
+
+                    if ($invoiceResult['success']) {
+                        $response["success"] = true;
+                        $response["message"] = "Consommation enregistrée et facture générée automatiquement.";
+                        $response["consumption"] = $newConsumption;
+                        $response["invoice"] = $invoiceResult;
+                    } else {
+                        $response["errors"][] = "Erreur lors de la génération de la facture.";
+                    }
+                } else {
+                    $response["errors"][] = "Erreur lors de l'enregistrement de la consommation.";
+                }
+            }
+        } catch (Exception $e) {
+            $response["errors"][] = "Erreur: " . $e->getMessage();
+        }
+    }
+    header('Content-Type: application/json');
+    echo json_encode($response);
+    exit;
+
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'debug') {
     // Debugging endpoint
     try {
